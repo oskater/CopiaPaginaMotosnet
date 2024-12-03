@@ -1,0 +1,16 @@
+@font-face {
+    font-family: poppins;
+    src: url("./../assets/fonts/Poppins/Poppins-Light.ttf");
+}
+
+*{
+    font-family: poppins;
+    font-weight: bolder;
+}
+
+.background{
+    background-image: url("./../assets/images/fondo_yamahaR7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
