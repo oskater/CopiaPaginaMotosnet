@@ -9,8 +9,13 @@
 }
 
 .background{
-    background-image: url("./../assets/images/fondo_yamahaR7.jpg");
+    background-image: url("./../assets/images/fondo_yamaha_R7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.selected{
+    color: black;
+    border-bottom: 4px solid black;
 }
