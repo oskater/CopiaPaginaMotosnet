@@ -16,6 +16,13 @@
 }
 
 .selected{
-    color: black;
-    border-bottom: 4px solid black;
+    color: #000E23;
+    border-bottom: 4px solid #000E23;
+}
+
+.fondo_azul_oscuro{
+    background-color: #000E23;
+}
+.texto_azul_oscuro{
+    color: #000E23;
 }
