@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS - Primero </title>
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./../output.css">
+    <link rel="stylesheet" href="./../input.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+
+<!-- Container general que funcione entre 600 y 1200px -->
+
+<body class="container p-4 min-w-[600px] max-w-[1200px] mx-auto flex-col items-center bg-gray-100">
+
+    <header
+        class="w-full h-[80px] flex justify-between items-center p-4 bg-white rounded-[20px] shadow-sm shadow-gray-300">
+
+        <!-- Contenedor para burgerbutton y logo -->
+        <div class="flex justify-start items-center gap-4">
+            <div class="flex lg:hidden"><i class="fa-solid fa-bars text-4xl flex"></i></div>
+            <a href="./../index.html"><img class="w-[120px] md:w-[160px] lg:w-[200px]" src="./../assets/images/logo.jpg"
+                    alt=""></a>
+        </div>
+
+        <!-- Container para navlist no visualizado hasta LG -->
+        <nav class="">
+            <ul class="hidden lg:flex lg:justify-between lg:items-center lg:gap-4">
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="./motos.html">Buscar</a></li>
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Pruebas e información</a></li>
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Trámites y Servicios</a></li>
+                <li class="flex justify-between items-center gap-4 text-center p-2 hover:bg-gray-200 rounded-[20px]">
+                    <i class="fa-solid fa-circle-user text-3xl"></i><a href="./pages/user.html">Mi cuenta</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Container para botones Acceder/Vender -->
+        <div class="flex justify-end items-center gap-2">
+            <button
+                class="text-white px-5 py-2 rounded-[30px] text-xl border-2 bg-[#000E23] font-bold flex justify-between items-center gap-2"><i
+                    class="fa-solid fa-pen-to-square"></i>Vender</button>
+        </div>
+
+    </header>
+
+    <!-- Articulo para textos y barra de buscador -->
+    <article class="w-full flex-col justify-start items-center mt-4">
+
+        <div class="w-auto flex justify-start items-center gap-4">
+
+            <h2
+                class="text-3xl bg-clip-text fill-transparent bg-gradient-to-r from-pink-400 to-violet-500 text-transparent">
+                Asistente de motos.net <h2 class="text-3xl">¿En qué puedo ayudarte? </h2>
+            </h2>
+            <p class="text-xl p-2 text-center bg-gray-200 rounded-[5px] font-thin  w-[70px]"><a href="#">Beta</a></p>
+
+        </div>
+
+        <p class="mt-2 font-thin">Este buscador funciona con IA y puede mostrar resultados inesperados. Revisa y ajusta
+            los filtros si es necesario.</p>
+
+        <div class="p-4 w-full flex justify-between items-center border-2 rounded-[40px] bg-white">
+
+            <div class="w-full flex items-center gap-6">
+                <i class="fa-solid fa-magnifying-glass text-black"></i>
+                <input type="text" placeholder="Scooters de 125cc baratas con menos de 10 000 km y menos de 5 años"
+                    class="w-full text-gray-500 font-thin focus:outline-none"></input>
+            </div>
+
+            <div class="text-white px-4 py-2 bg-red-200 rounded-[40px]">Buscar</div>
+
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+            <p class="font-bold">33.089 Motos de segunda mano y ocasión</p>
+
+            <div class="flex justify-center items-center gap-4">
+                <i class="fa-regular fa-circle-question"></i>
+                <p> Ordenar: </p>
+                <p>Los anuncios más relevantes</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="w-full flex justify-between items-start gap-4 mt-4">
+        <!-- Aside para los filtros de la pagina -->
+        <aside class="w-[300px] flex-col justify-center text-center mt-4">
+            <button class="bg-red-600 px-4 py-2 w-[200px] text-white font-bold rounded-[20px]"><i
+                    class="fa-regular fa-bell mr-2"></i>Crear alerta</button>
+
+            <!-- Box para los filtros -->
+            <div class="text-left w-full p-4 mt-4 bg-white rounded-[10px]">
+                <label for="">Marca</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="marca" id="marcas">
+                    <option value="cualquiera">Cualquiera</option>
+                </select>
+
+                <label for="">Modelo</label>
+                <input type="text" class="w-full py-4 px-2 border-2 rounded-[10px] mb-4" name="modelo" id="modelo">
+
+                <label for="">Marca</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde"
+                    id="desde_precio">
+                    <option value="desde">Desde</option>
+                </select>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="hasta"
+                    id="hasta_precio">
+                    <option value="hasta">Hasta</option>
+                </select>
+
+                <label for="">Provincias</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="provincias"
+                    id="provincias">
+                    <option value="cualquiera">Cualquiera</option>
+                </select>
+
+                <input class="mr-4" type="checkbox" name="peninsula" id="peninsula">
+                <label class="" for="">Solo Península y Baleares</label>
+                <p class="w-full text-sm font-thin">Anuncios de toda España excepto Canarias, Ceuta y Melilla.</p>
+
+                <label for="">Vendedor</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="vendedores"
+                    id="vendedores">
+                    <option value="todos">Todos</option>
+                    <option value="particular">Particular</option>
+                    <option value="profesional">Profesional</option>
+                </select>
+
+                <label for="">Año</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde" id="desde_ano">
+                    <option value="desde">Desde</option>
+                </select>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="hasta" id="hasta_ano">
+                    <option value="hasta">Hasta</option>
+                </select>
+
+                <label for="">Kilómetros</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde" id="desde_km">
+                    <option value="desde">Desde</option>
+                </select>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="hasta" id="hasta_km">
+                    <option value="hasta">Hasta</option>
+                </select>
+
+                <label for="">Tipos de moto</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde" id="tipo">
+                    <option value="cualquiera">Cualquiera</option>
+                    <option value="sport">Sport</option>
+                    <option value="naked">Naked</option>
+                    <option value="trail">Trail</option>
+                    <option value="enduro">Enduro</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <label for="">Combustible</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde"
+                    id="combustible">
+                    <option value="cualquiera">Cualquiera</option>
+                    <option value="gasolina">Gasolina</option>
+                    <option value="electrico">Eléctrico</option>
+                </select>
+
+                <label for="">Potencia</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde"
+                    id="desde_potencia">
+                    <option value="desde">Desde</option>
+                </select>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="hasta"
+                    id="hasta_potencia">
+                    <option value="hasta">Hasta</option>
+                </select>
+
+                <label for="">Cilindrada</label>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="desde" id="desde_cc">
+                    <option value="desde">Desde</option>
+                    <option value="50">50</option>
+                    <option value="125">125</option>
+                    <option value="250">250</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="750">750</option>
+                    <option value="1000">1000</option>
+                </select>
+                <select class="w-full py-4 px-2 border-2 rounded-[10px] mb-4 text-gray-500" name="hasta" id="hasta_cc">
+                    <option value="hasta">Hasta</option>
+                    <option value="50">50</option>
+                    <option value="125">125</option>
+                    <option value="250">250</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="750">750</option>
+                    <option value="1000">1000</option>
+                </select>
+
+                <input class="mr-4" type="checkbox" name="foto" id="foto">
+                <label class="" for="">Solo con foto</label>
+            </div>
+
+        </aside>
+
+        <!-- Bloque para las motos en busca -->
+        <div class="w-full flex-col justify-center items-start">
+            <!-- Benelli -->
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/10/15/8497687/29549967_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">BENELLI TRK 502 X</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">5.190 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Madrid</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2021</h2>
+                        <h2 class="text-sm text-gray-400 px-2">16.308Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/11/29/8535389/29967886_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">YAMAHA T-MAX 530 ABS</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">7.990 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Málaga</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2014</h2>
+                        <h2 class="text-sm text-gray-400 px-2">31.800Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2022/09/01/7877520/23293537_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">VOGE ER-10</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">3.690 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Valencia</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Eléctrico</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2021</h2>
+                        <h2 class="text-sm text-gray-400 px-2">700Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/04/16/8328461/27372944_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">HONDA CB 1300 ABS</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">7.790 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Barcelona</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2009</h2>
+                        <h2 class="text-sm text-gray-400 px-2">16.450Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/11/27/8533171/29947433_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">HONDA CBR 500 R</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">6.990 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Madrid</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2022</h2>
+                        <h2 class="text-sm text-gray-400 px-2">7.995Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/07/16/8423782/30038563_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">TRIUMPH TIGER 900 GT</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">6.990 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Madrid</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2020</h2>
+                        <h2 class="text-sm text-gray-400 px-2">25.267Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/08/21/8450595/29004468_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">KYMCO SUPER DINK 125 ABS</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">3.299 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Sevilla</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2019</h2>
+                        <h2 class="text-sm text-gray-400 px-2">18.911Km</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[95%] mt-4 bg-white h-[250px] rounded-[10px] flex">
+                <img class="rounded-l-[10px]" src="https://a.mcdn.es/mnet/2024/08/26/8453914/29995441_g.jpg/252x189cut/"
+                    alt="">
+
+                <div class="flex-col w-full">
+                    <div class="w-full flex justify-between p-4">
+                        <h2 class="text-xl">YAMAHA TMAX 560 TECH MAX</h2>
+                        <i class="fa-regular fa-heart text-2xl text-red-600"></i>
+                    </div>
+
+                    <div class="w-[400px] flex justify-start items-start p-4">
+                        <div class="flex-col border-r-2 border-r-gray-300 px-4">
+                            <h2 class="text-sm">Precio al contado</h2>
+                            <h2 class="text-red-600 text-3xl">9.999 €</h2>
+                        </div>
+                        <div class="w-[150px] flex-col items-start px-4">
+                            <h2 class="text-sm text-green-500">Con garantía</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-[80%] px-6 flex justify-start items-center">
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Madrid</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">Gasolina</h2>
+                        <h2 class="text-sm text-gray-400 border-r-2 border-r-gray-400 px-2">2021</h2>
+                        <h2 class="text-sm text-gray-400 px-2">26.704Km</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+
+    <script src="https://kit.fontawesome.com/ec5d753fff.js" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS - Primero </title>
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./../output.css">
+    <link rel="stylesheet" href="./../input.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+
+<!-- Container general que funcione entre 600 y 1200px -->
+
+<body class="container p-4 min-w-[600px] max-w-[1200px] mx-auto flex-col items-center bg-gray-100">
+
+    <header
+    class="w-full h-[80px] flex justify-between items-center p-4 bg-white rounded-[20px] shadow-sm shadow-gray-300">
+
+    <!-- Contenedor para burgerbutton y logo -->
+    <div class="flex justify-start items-center gap-4">
+      <div class="flex lg:hidden"><i class="fa-solid fa-bars text-4xl flex"></i></div>
+      <a href="./../index.html"><img class="w-[120px] md:w-[160px] lg:w-[200px]" src="./../assets/images/logo.jpg" alt=""></a>
+    </div>
+
+    <!-- Container para navlist no visualizado hasta LG -->
+    <nav class="">
+      <ul class="hidden lg:flex lg:justify-between lg:items-center lg:gap-4">
+        <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="./motos.html">Buscar</a></li>
+        <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Pruebas e información</a></li>
+        <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Trámites y Servicios</a></li>
+        <li class="flex justify-between items-center gap-4 text-center p-2 hover:bg-gray-200 rounded-[20px]">
+          <i class="fa-solid fa-circle-user text-3xl"></i><a href="./pages/user.html">Mi cuenta</a></li>
+      </ul>
+    </nav>
+
+    <!-- Container para botones Acceder/Vender -->
+    <div class="flex justify-end items-center gap-2">
+      <button
+        class="text-white px-5 py-2 rounded-[30px] text-xl border-2 bg-[#000E23] font-bold flex justify-between items-center gap-2"><i
+          class="fa-solid fa-pen-to-square"></i>Vender</button>
+    </div>
+
+  </header>
+
+  <article class="w-full mt-4  px-16 py-8  rounded-[20px] flex justify-center items-center gap-4
+  bg-[url('https://s.ccdn.es/images/login-container-bg-motos.jpg')] bg-cover bg-no-repeat">
+
+    <section class="flex w-[900px] h-[450px] md:h-[400px] justify-center">
+
+        <div class="w-[300px] rounded-l-[20px] flex-col justify-start items-center p-4 bg-[#000e237c]">
+
+            <img class="w-[40px] h-[40px] rounded-[10px] mt-[35%]" src="./../assets/images/logoM.jpg" alt="">
+            <h2 class="text-2xl font-extrabold text-white w-[95%] mt-8">Encuentra o vende tu moto en el portal líder de España</h2>
+
+        </div>
+
+        <div class="w-[49%] rounded-r-[20px] flex-col justify-center items-center p-4 bg-white">
+
+            <h1 class="text-center text-2xl">Inicia sesión</h1>
+
+            <form class="flex-col justify-center text-left mt-4 text-gray-600" action="">
+                <label for="email">Email</label>
+                <div class="flex justify-start items-center gap-2 px-4 py-2 border-2 border-gray-300 hover:border-gray-600 rounded-[10px]">
+                    <i class="fa-regular fa-envelope text-[#000E23]"></i>
+                    <input class="w-full border-none focus:outline-none valid:text-green-600 invalid:text-red-600" type="email" placeholder="Email *">
+                </div>
+
+                <label for="contrasena">Contraseña</label>
+                <div class="flex justify-start items-center gap-2 px-4 py-2 border-2 border-gray-300 hover:border-gray-600 rounded-[10px]">
+                    <i class="fa-solid fa-lock text-[#000E23]"></i>
+                    <input minlength="8" class="w-full border-none focus:outline-none valid:text-green-600 invalid:text-red-600" type="password" placeholder="Contraseña *">
+                </div>
+
+                <div class="flex justify-start items-center gap-2 p-2">
+                    <input type="checkbox">
+                    <label for="no cerrar sesion">No cerrar sesión</label>
+                </div>
+
+                <div class="w-full flex-col justify-center">
+                    <button type="submit" class="w-full rounded-[50px] bg-red-600 hover:bg-red-800 text-white px-4 py-2">Iniciar sesión</button>
+                    <button type="submit" class="w-full mt-4 rounded-[50px] border-2 text-[#000E23] border-gray-500 hover:bg-gray-200 px-4 py-2">¿Aún no tienes cuenta?</button>
+                    <p class="mt-4 text-center text-[#000E23] font-extrabold text-sm underline"><a href="#">¿Has olvidado tu contraseña?</a></p>
+                </div>
+                
+                
+
+            </form>
+
+        </div>
+
+    </section>
+
+  </article>
+
+  <script src="https://kit.fontawesome.com/ec5d753fff.js" crossorigin="anonymous"></script>
+  <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>
