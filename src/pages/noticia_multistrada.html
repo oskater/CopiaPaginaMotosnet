@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS - Primero </title>
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./../output.css">
+    <link rel="stylesheet" href="./../input.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+
+<!-- Container general que funcione entre 600 y 1200px -->
+
+<body class="container p-4 min-w-[600px] max-w-[1200px] mx-auto flex-col items-center bg-gray-100">
+
+    <header
+        class="w-full h-[80px] flex justify-between items-center p-4 bg-white rounded-[20px] shadow-sm shadow-gray-300">
+
+        <!-- Contenedor para burgerbutton y logo -->
+        <div class="flex justify-start items-center gap-4">
+            <div class="flex lg:hidden"><i class="fa-solid fa-bars text-4xl flex"></i></div>
+            <a href="./../index.html"><img class="w-[120px] md:w-[160px] lg:w-[200px]" src="./../assets/images/logo.jpg"
+                    alt=""></a>
+        </div>
+
+        <!-- Container para navlist no visualizado hasta LG -->
+        <nav class="">
+            <ul class="hidden lg:flex lg:justify-between lg:items-center lg:gap-4">
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="./motos.html">Buscar</a></li>
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Pruebas e información</a></li>
+                <li class="text-center p-2 hover:bg-gray-200 rounded-[20px]"><a href="#">Trámites y Servicios</a></li>
+                <li class="flex justify-between items-center gap-4 text-center p-2 hover:bg-gray-200 rounded-[20px]">
+                    <i class="fa-solid fa-circle-user text-3xl"></i><a href="./../pages/user.html">Mi cuenta</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Container para botones Acceder/Vender -->
+        <div class="flex justify-end items-center gap-2">
+            <button
+                class="text-white px-5 py-2 rounded-[30px] text-xl border-2 bg-[#000E23] font-bold flex justify-between items-center gap-2"><i
+                    class="fa-solid fa-pen-to-square"></i>Vender</button>
+        </div>
+
+
+    </header>
+
+    <!-- Container para el main -->
+    <main class="w-full flex justify-center items-start gap-4 p-4 mt-4 rounded-[20px] bg-white">
+
+        <!-- Article dedicado a las noticias e información -->
+        <article class="w-full p-2 flex-col justify-center items-center">
+            <a class="underline ml-4" href="#">Noticias de motos</a>
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/73/73e870b9-f703-413b-a4c8-bc1729e8f77f?rule=articleBodyImage"
+                alt="">
+            <h2
+                class="w-[120px] font-thin mt-4 ml-2 p-2 bg-[#FCCFA2] hover:bg-[#fcba78] text-center rounded-[20px] border-2 border-[#fcba78]">
+                NOVEDADES</h2>
+            <h2 class="w-[95%] mt-4 text-4xl font-extrabold">Ducati Multistrada V2: Presentada en el Salón Intermot de
+                Colonia (Alemania) y llega en Enero</h2>
+
+            <div class="mt-8 w-[95%] flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <img class="w-[50px] rounded-full"
+                        src="https://images.ctfassets.net/9e7ee3mxh5xl/5bIauVkVCcTrOmah4xKPel/ca42928a3ad6451e3a30c3801324b905/Jaume_Gustems.jfif"
+                        alt="">
+                    <h4>Jaume Gustems</h4>
+                </div>
+                <h4>5 de Diciembre de 2024</h4>
+                <div class="flex items-center gap-4">
+                    <i class="fa-regular fa-message"></i>
+                    <h4>1 opinión</h4>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <h4>Compartir</h4>
+                </div>
+            </div>
+
+            <p class="text-xl mt-8 font-thin">
+                Ducati ha sido la marca protagonista del la <a class="font-extrabold">feria Intermot de Colonia
+                    (Alemania) con la presentación
+                    mundial de la nueva Ducati Multistrada V2</a>, una nueva generación de esta trail de medio tamaño
+                que adopta
+                el <a class="font-extrabold">nuevo propulsor V2 ya conocido de la Ducati Panigale V2 y la Ducati
+                    Streetfighter V2</a>, así como un
+                <a class="font-extrabold underline">nuevo chasis de aluminio monocasco</a>, entre otros muchos detalles.
+            </p>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/3d/3dd3af70-15fd-4908-8fee-68b3d2918af7?rule=articleBodyImage"
+                alt="">
+
+            <p class="text-xl mt-8 font-thin">
+                El diseño de la nueva Multistrada es continuista, pero en realidad cambia prácticamente todo. La
+                ergonomía se ha mejorado, aprovechando el nuevo chasis.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                La Ducati Multistrada V2 es una <a class="font-extrabold">moto absolutamente nueva</a>, aunque respeta
+                la estética que ha
+                caracterizado a este modelo desde su lanzamiento hace ya 21 años y que tanta aceptación ha tenido entre
+                <a class="font-extrabold">el público que busca una trail de tamaño medio polivalente tanto para uso
+                    diario como para aventuras en
+                    solitario o compañía.</a>
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                Claramente <a class="font-extrabold">la línea de diseño es continuista</a>, pero si os fijáis bien,
+                prácticamente todas las piezas de
+                la moto cambian su forma. El frontal mantiene la tradicional imagen de “pico de pato” con un <a
+                    class="font-extrabold">nuevo
+                    diseño de la óptica LED (inspirado en el de la Panigale y la Multistrada V4), la cúpula, los
+                    intermitentes (en una posición un poco más elevada) y los deflectores laterales</a>, con el objetivo
+                estos
+                últimos de dirigir más aire fresco a las piernas.
+            </p>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/d0/d0d36190-9fee-480c-aaec-e4e2d0385b7e?rule=articleBodyImage"
+                alt="">
+
+            <p class="text-xl mt-8 font-thin">
+                Se han introducido unos nuevos deflectores de aire que canalizan aire fresco a las piernas. Los
+                intermitentes también son ahora integrados.
+            </p>
+
+            <h2 class="text-3xl mt-8 font-extrabold">Nuevo chasis monocasco de aluminio</h2>
+
+            <p class="text-xl mt-8 font-thin">
+                El <a class="font-extrabold">nuevo chasis monocasco de aluminio</a> le hace cambiar ligeramente el
+                aspecto lateral, ya que se acompaña
+                de un <a class="font-extrabold">nuevo basculante, también en aluminio, y un subchasis en acero</a>. La
+                moto, gracias al empleo de
+                estos materiales y al nuevo propulsor, <a class="font-extrabold">pesa 18 kilos menos que la anterior
+                    Multistrada.</a>
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                Desde el punto de vista ergonómico, <a class="font-extrabold">se ha modificado el diseño del asiento, se
+                    ha añadido más espacio
+                    para el pasajero</a>, modificando los anclajes para las maletas. Por otro lado, el asiento puede
+                colocarse
+                en dos posiciones ( a 830 u 850 mm. Del suelo) y puede pedirse de forma opcional un asiento más alto
+                (870mm.) o más bajo (810mm).
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                En la versión S, gracias al sistema DSS, <a class="font-extrabold">puede incluso colocarse el asiento a
+                    790mm. del suelo. </a>
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                La nueva Multistrada <a class="font-extrabold">se ve todavía más ligera y más ergonómica, sin perder a
+                    grandes rasgos la línea que
+                    siempre ha caracterizado a este modelo.</a>
+            </p>
+
+            <h2 class="text-3xl mt-8 font-extrabold">El motor V2 de la Panigale en la Ducati Multistrada V2</h2>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/bc/bc93aee0-1924-4e2c-a18f-bd33f06b65a6?rule=articleBodyImage"
+                alt="">
+
+            <p class="text-xl mt-8 font-thin">
+                El nuevo bicicilíndrico pesa menos y ofrece 115 CV, y según Ducati, contribuye a mejorar la dinámica de
+                esta trail media.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                El cambio más significativo también lo encontramos en el propulsor, ya que se ha optado por el <a
+                    class="font-extrabold">nuevo V2
+                    a 90º bicilíndrico, con 890 cc y sistema variable de válvulas. Ofrece 115 CV a 10.750 r.p.m.</a> y
+                92 Nm de
+                par a 8.250 vueltas.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                Ducati afirma que ahora hay una <a class="font-extrabold">entrada más progresiva de la respuesta al
+                    acelerador</a>, además de que se
+                utilizan unas relaciones de cambio algo más cortas en primera y segunda relación. El Quickshifter es
+                opcional, y ahora se ha modificado incluyendo el sensor en la propia caja de cambios, no en el exterior
+                de la moto
+            </p>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/ad/aded2067-1afc-4ca7-b9f3-e403c245d5f3?rule=articleBodyImage"
+                alt="">
+
+            <p class="text-xl mt-8 font-thin">
+                La pantalla TFT es nueva, y permite modificar el aspecto de los menús y la información en tres programas
+                diferentes.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                Monta horquilla Marzocchi de 45 mm. y amortiguador Sachs detrás. <a class="font-extrabold">La versión S
+                    equipa suspensión
+                    semi-activa</a> y, como en la Multistrada V4, es posible adaptar su comportamiento de forma
+                independiente a
+                los modos de conducción.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                La pantalla que visualiza todos estos cambios en la electrónica es de <a class="font-extrabold">TFT de 5
+                    pulgadas</a> y se sirve de un nuevo sistema operativo multilingüe.
+            </p>
+
+            <h2 class="text-3xl mt-8 font-extrabold">Ducati Multistrada V2: Disponible en Enero</h2>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/4b/4b6900cb-66eb-462b-a02e-1a16359cf28c?rule=articleBodyImage"
+                alt="">
+
+            <p class="text-xl mt-8 font-thin">
+                Las mejoras en ergonomía deben hacer a la Multistrada V2 una trail más fácil de manejar en parado y en
+                ciudad.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                La línea de accesorios disponibles como opción no cambia demasiado respecto a la de la anterior
+                Multistrada, y se mantiene, obviamente, <a class="font-extrabold">el color Rojo Ducati de serie desde la
+                    versión standard</a>. La
+                Multistrada S puede pedirse también en color Storm Green.
+            </p>
+
+            <p class="text-xl mt-8 font-thin">
+                La nueva Ducati Multistrada V2 2025 <a class="font-extrabold">llegará a los concesionarios de toda
+                    Europa en enero</a>, a un precio todavía no comunicado.
+            </p>
+
+            <h2 class="text-3xl mt-8 font-extrabold">Galería de fotos de Ducati Multistrada V2: Presentada en el Salón
+                Intermot de Colonia (Alemania) y llega en Enero</h2>
+
+            <img class="mt-8 rounded-[20px]"
+                src="https://content.media.mcdn.es/api/v1/mnet-media/images/73/73e870b9-f703-413b-a4c8-bc1729e8f77f?rule=original"
+                alt="">
+
+            <!-- Fotos bajo la galeria -->
+            <div class="w-full mt-8 flex justify-between items-center gap-4">
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] border-4 border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/73/73e870b9-f703-413b-a4c8-bc1729e8f77f?rule=original"
+                        alt="">
+                </div>
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/77/774a91ee-aae9-4e14-a15e-8d967907d940?rule=thumbnail"
+                        alt="">
+                </div>
+
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/3d/3dd3af70-15fd-4908-8fee-68b3d2918af7?rule=thumbnail"
+                        alt="">
+                </div>
+
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/6e/6e1f83cc-b304-42b4-96e7-d4ac6ad7152b?rule=thumbnail"
+                        alt="">
+                </div>
+
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/2b/2ba10a3d-5955-4b6a-bbe2-56830180be19?rule=thumbnail"
+                        alt="">
+                </div>
+
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/ac/acf0e838-d317-430d-be80-3124b7548ee0?rule=thumbnail"
+                        alt="">
+                </div>
+
+                <div class="flex-1 basis-[100px] h-[50px]">
+                    <img class="object-cover rounded-[20px] hover:border-2 hover:border-black"
+                        src="https://content.media.mcdn.es/api/v1/mnet-media/images/f2/f284b5c7-f55a-42fd-8ea7-7eaeda1679b5?rule=thumbnail"
+                        alt="">
+                </div>
+
+            </div>
+
+            <h2 class="text-3xl mt-16 mb-8 font-extrabold">Opiniones de Ducati Multistrada V2: Presentada en el Salón
+                Intermot de Colonia (Alemania) y llega en Enero</h2>
+
+            <div
+                class="w-full h-[300px] p-8 rounded-[20px] shadow-md shadow-gray-300 flex justify-evenly items-center gap-4">
+                <img class="w-[250px] h-[200px]" src="https://s.ccdn.es/images/illustrations/comments.svg" alt="">
+                <div class="w-[400px] flex-col p-4">
+                    <h2 class="mt-4">Forma parte de nuestra comunidad</h2>
+
+                    <p class=" mt-8 font-thin">
+                        Si te ha gustado nuestro artículo y quieres dejar tu opinión, tienes que tener una cuenta en
+                        coches.net.
+                    </p>
+                </div>
+
+                <button class="bg-red-600 px-4 py-2 w-[200px] h-[50px] text-white font-bold rounded-[20px]">Crear
+                    Cuenta</button>
+            </div>
+
+        </article>
+
+
+
+
+        <aside
+            class="w-[460px] flex-col justify-center items-start gap-4 px-4 py-8 border-l-2 border-l-gray-200 sticky top-0">
+            <section
+                class="flex-col gap-4 justify-center p-4 items-start shadow-md border-2 border-gray-200 shadow-md shadow-gray-300 shadow-gray-300 rounded-[20px]">
+                <h2 class="text-3xl">Suscríbete al boletín de noticias</h2>
+                <input class="w-[90%] h-[50px] mt-4 p-2 border-2 border-gray-200 rounded-[10px]" type="text"
+                    name="email" id="email" placeholder="email@ejemplo.com">
+
+                <div class="flex justify-between items-start gap-4 mt-4">
+                    <input class="mt-2" type="checkbox" name="condiciones" id="condiciones">
+                    <label class="font-thin" for="">Acepto las <a class="font-bold underline">condiciones de uso</a> y
+                        la <a class="font-bold underline">información básica de protección de datos.</a></label>
+                </div>
+
+                <div class="w-full text-center">
+                    <button
+                        class="mt-2 bg-red-600 px-4 py-2 w-[200px] h-[50px] text-white font-bold rounded-[20px]">Recibir
+                        boletín</button>
+                </div>
+            </section>
+
+            <h2 class="m-4 text-xl">Noticias relacionadas</h2>
+
+            <section
+                class="flex-col gap-4 justify-center items-start border-2 border-gray-200 shadow-md shadow-gray-300 rounded-[20px]">
+                <img class="rounded-t-[20px] object-cover"
+                    src="https://a.mcdn.es/mnet/contents/media/resources/2020/1/1153292.jpg/300x168cut/" alt="">
+                <div class="w-full p-4 flex-col">
+                    <h2
+                        class="w-[140px] font-thin mt-4 ml-2 p-2 bg-[#FCCFA2] hover:bg-[#fcba78] text-center rounded-[20px] border-2 border-[#fcba78]">
+                        Comparativas</h2>
+
+                    <h2 class="p-2 text-xl">Ducati Multistrada 950 S vs MV Agusta Turismo Veloce Lusso SCS</h2>
+
+                    <p class="p-2 font-thin">Dos italianas muy seductoras por diseño y prestaciones</p>
+                </div>
+            </section>
+
+            <section
+                class=" mt-4 flex-col gap-4 justify-center items-start border-2 border-gray-200 shadow-md shadow-gray-300 rounded-[20px]">
+                <img class="rounded-t-[20px] object-cover"
+                    src="https://a.mcdn.es/mnet/contents/media/resources/2012/11/178262.jpg/300x168cut/" alt="">
+                <div class="w-full p-4 flex-col">
+                    <h2
+                        class="w-[120px] font-thin mt-4 ml-2 p-2 bg-[#8F88F5] hover:bg-[#645bec] text-center rounded-[20px] border-2 border-[#645bec]">
+                        Pruebas</h2>
+
+                    <h2 class="p-2 text-xl">Ducati Multistrada 1200: Una Ducati con sentido común...</h2>
+
+                    <p class="p-2 font-thin">Ducati Multistrada 1200: Una Ducati con sentido común...</p>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <!-- Fin del container del main -->
+
+    <footer class="w-full flex-col justify-center items-start mt-8 p-4">
+        <div class="flex justify-between items-center">
+            <!-- Box para logo, App Store y Google Play -->
+            <div class="w-[50%] flex justify-between items-center gap-4">
+                <a href="./../index.html"><img class="w-[120px] md:w-[160px] lg:w-[200px]"
+                        src="./../assets/images/logo.jpg" alt=""></a>
+
+                <div
+                    class="w-[200px] h-[70px] flex items-center gap-4 border-2 border-gray-400 px-4 py-2 rounded-[20px]">
+                    <i class="fa-brands fa-apple text-4xl text-gray-400"></i>
+                    <h2 class="text-xl text-gray-400">App Store</h2>
+                </div>
+
+                <div
+                    class="w-[200px] h-[70px] flex items-center gap-4 border-2 border-gray-400 px-4 py-2 rounded-[20px]">
+                    <i class="fa-brands fa-google-play text-4xl text-gray-400"></i>
+                    <h2 class="text-xl text-gray-400">Google Play</h2>
+                </div>
+            </div>
+
+            <div class="w-[30%] flex justify-between items-center gap-4">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+                <i class="fa-brands fa-instagram text-xl"></i>
+                <i class="fa-brands fa-youtube text-xl"></i>
+                <i class="fa-brands fa-tiktok text-xl"></i>
+                <i class="fa-brands fa-linkedin text-xl"></i>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-start mt-8">
+            <ul class="flex-1 basis-[25%]">
+                <li>Sobre motos.net</li>
+                <li class="font-thin hover:underline">Conócenos</li>
+                <li class="font-thin hover:underline">¿Cuál es tu forma de moverte?</li>
+                <li class="font-thin hover:underline">Descarga nuestra app</li>
+                <li class="font-thin hover:underline">Sala de prensa</li>
+                <li class="font-thin hover:underline">Trabaja con nosotros</li>
+                <li class="font-thin hover:underline">Mapa web</li>
+            </ul>
+            <ul class="flex-1 basis-[25%]">
+                <li>Encuentra en motos.net</li>
+                <li class="font-thin hover:underline">Motos de segunda mano</li>
+                <li class="font-thin hover:underline">Motos nuevas</li>
+                <li class="font-thin hover:underline">Motos clásicas</li>
+                <li class="font-thin hover:underline">Scooters de segunda mano</li>
+                <li class="font-thin hover:underline">Quads de segunda mano</li>
+                <li class="font-thin hover:underline">Buggies de segunda mano</li>
+                <li class="font-thin hover:underline">Pit nikes segunda mano</li>
+                <li class="font-thin hover:underline">Noticias de motos</li>
+            </ul>
+            <ul class="flex-1 basis-[25%]">
+                <li>Vendedores particulares</li>
+                <li class="font-thin hover:underline">Vende tu moto</li>
+
+            </ul>
+            <ul class="flex-1 basis-[25%]">
+                <li>Para profesionales</li>
+                <li class="font-thin hover:underline">Acceso profesionales</li>
+                <li class="font-thin hover:underline">Publica como profesional</li>
+                <li class="font-thin hover:underline">Preguntas frecuentes profesionales</li>
+                <li class="font-thin hover:underline">Blog para profesionales</li>
+
+            </ul>
+            <ul class="flex-1 basis-[25%]">
+                <li>Guías e información</li>
+                <li class="font-thin hover:underline">¿Qué moto me compro?</li>
+                <li class="font-thin hover:underline">Trámites compra-venta</li>
+                <li class="font-thin hover:underline">Preguntas frecuentes</li>
+                <li class="font-thin hover:underline">Fichas técnicas de motos</li>
+                <li class="font-thin hover:underline">Comparador de motos</li>
+            </ul>
+        </div>
+
+        <div class="w-full border-t-2 border-t-gray-300 mt-8">
+            <p class="font-thin mt-4">motos.net es partner de 
+                <a href="#" class="underline font-bold">coches.net</a> 
+                <a href="#" class="underline font-bold">Milanuncios</a> 
+                <a href="#" class="underline font-bold">Fotocasa</a> 
+                <a href="#" class="underline font-bold">habitaclia</a> 
+                <a href="#" class="underline font-bold">InfoJobs</a>
+            </p>
+
+            <p class="font-thin mt-4">© 2024 Adevinta Motor S.L.U.: 
+                <a href="#" class="underline font-bold">Condiciones de uso</a> 
+                <a href="#" class="underline font-bold">Política de cookies</a>
+                <a href="#" class="underline font-bold">Política de privacidad</a> 
+                <a href="#" class="underline font-bold">Gestionar cookies</a> 
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/ec5d753fff.js" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>
